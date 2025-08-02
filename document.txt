@@ -1,0 +1,74 @@
+✅ MỤC TIÊU TỔNG THỂ
+Nội dung	Mô tả chi tiết
+Loại website	Giới thiệu công ty
+Công nghệ chính	WordPress tự host, dùng theme riêng
+Tập trung chính	Frontend (giao diện đẹp, tái sử dụng tốt), tốc độ load nhanh
+Số lượng trang	~30 trang tĩnh
+Thiết kế	Đã có sẵn layout design riêng, không dùng theme dựng sẵn
+
+✅ YÊU CẦU CỤ THỂ
+Hạng mục	Yêu cầu chi tiết
+🎨 Frontend (FE)	- Giao diện theo thiết kế riêng (PSD/Figma)
+- Ưu tiên HTML/CSS/JS tay hoặc dùng Tailwind CSS
+- Tái sử dụng các block UI như card, banner, CTA, v.v.
+📱 Responsive + Mobile-ready	- Thiết kế mobile ngay từ đầu (responsive)
+- Sử dụng breakpoint rõ ràng (SCSS hoặc Tailwind)
+- Sau này có thể mở rộng làm bản PWA/app
+🧩 Kiến trúc theme	- Custom theme (không dùng builder)
+- Tách template-parts/ để chia nhỏ component
+- Các trang dùng page-{slug}.php, single-{cpt}.php, v.v.
+🧠 Quản lý nội dung	- Dùng ACF để tạo field riêng
+- Dùng CPT (Post Type) nếu có nội dung lặp lại (Ví dụ: Dự án, Đội ngũ, Tin tức...)
+⚙️ Tối ưu tốc độ	- Tối ưu ảnh (WebP, lazy load, preload)
+- Gzip + Cache (qua plugin hoặc cấu hình server)
+- Giảm số HTTP request, minify JS/CSS
+🔍 Chuẩn SEO	- Dùng plugin (Yoast/Rank Math)
+- Tối ưu thẻ H1–H6, meta, og:image...
+- Sitemap tự động, hỗ trợ thẻ Schema.org
+- URL tĩnh chuẩn SEO
+🔄 Khả năng mở rộng backend	- Có thể thêm 1 số chức năng backend nhẹ: form liên hệ, bảng giá, đăng tin tuyển dụng
+🗂️ Tái sử dụng giao diện	- Mỗi block layout nên là một template part
+- Code clean, dễ gọi ra từ nhiều page khác nhau
+🌍 Đa ngôn ngữ (nếu cần)	- Có thể tích hợp WPML hoặc Polylang nếu cần tiếng Anh
+🧪 Dev-friendly	- Có thể dùng Gulp/Webpack để compile SCSS/JS
+- Có thể dùng Git để version control nếu làm teamwork
+
+✅ GỢI Ý CẤU TRÚC FILE THEME BAN ĐẦU
+css
+Copy
+Edit
+/your-theme/
+├── functions.php
+├── header.php
+├── footer.php
+├── index.php
+├── style.css
+├── template-parts/
+│   ├── hero.php
+│   ├── service-card.php
+│   ├── testimonial-slider.php
+├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+├── inc/
+│   ├── custom-post-types.php
+│   ├── acf-fields.php
+├── page-about.php
+├── page-contact.php
+├── ...
+✅ BƯỚC TIẾP THEO ĐỀ XUẤT CHO BẠN
+Xác định rõ cấu trúc sitemap (tên các trang, mục con)
+
+Tạo custom theme WordPress trắng (nếu bạn chưa có, mình gửi mẫu)
+
+Import layout bạn đã thiết kế vào từng file template
+
+Cắt HTML/CSS theo từng section, chia template-parts/
+
+Tích hợp ACF để nhập nội dung động
+
+Thêm lazy load ảnh + SEO plugin
+
+(Sau cùng) Triển khai bản responsive hoàn chỉnh cho mobile
+

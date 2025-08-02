@@ -1,0 +1,39 @@
+# ❌ Sensitive configuration files
+wp-config.php
+.htaccess
+nginx.conf
+
+# ❌ Uploads, caches, backups – not needed in repo
+wp-content/uploads/
+wp-content/cache/
+wp-content/backups/
+wp-content/upgrade/
+
+# ❌ Ignore all plugins/themes except yours
+wp-content/plugins/*
+!wp-content/plugins/your-plugin/
+
+wp-content/themes/*
+!wp-content/themes/your-theme/
+
+# ❌ Composer, Node, env files (if used)
+node_modules/
+vendor/
+.env
+.env.*
+
+# ❌ System files & temp
+*.log
+.DS_Store
+Thumbs.db
+*.zip
+*.tar.gz
+*.sql
+
+# ❌ IDE/editor config
+.vscode/
+.idea/
+*.sublime-*
+
+# ❌ OS-specific
+desktop.ini
